@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "lazyLoadForms"
+  "defaultProject": "lazyLoadForms",
+  "cli": {
+    "analytics": false
+  }
 }
