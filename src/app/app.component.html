@@ -3,5 +3,5 @@
 <ng-container *appNgForm="showAddressF" ></ng-container>
 </form>
 
-{{form.valid}}
+{{form.value | json}}
 <button (click)="showAddress()">Show Address</button>

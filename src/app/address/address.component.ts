@@ -17,13 +17,14 @@ export class AddressComponent implements OnInit,AfterViewInit, OnDestroy {
    }
 
   ngOnInit(): void {
-      this.parentForm.addControl('address', new FormControl('', Validators.required));
+    Promise.resolve().then(()=>{
+      this.address = new FormControl();
+      this.parentForm.addControl('address', this.address)
+      this.parentForm.updateValueAndValidity();
+    })
   }
 
   ngAfterViewInit(){
-    setTimeout(()=>{
-      this.parentForm.updateValueAndValidity({emitEvent: false});
-    })
   }
 
 
